@@ -1,0 +1,11 @@
+docker run -p 5432:5432 -d ^
+    --name blps_lab3 ^
+    -e POSTGRES_PASSWORD=postgres ^
+    -e POSTGRES_USER=postgres ^
+    -e POSTGRES_DB=bet_service ^
+    -v pgdata:/var/lib/postgresql/data ^
+    postgres
+
+psql stripe-example -h localhost -U postgres
+
+docker exec -it 7cf4068b56cd psql -U postgres postgres
