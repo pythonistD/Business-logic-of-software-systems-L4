@@ -1,4 +1,4 @@
-package cheboksarov.blps_lab4.controller;
+package cheboksarov.blps_lab4.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

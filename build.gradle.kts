@@ -33,7 +33,6 @@ allprojects {
         implementation("org.springframework.kafka:spring-kafka")
         implementation("org.springframework.boot:spring-boot-starter-web")
         implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-        implementation("org.springframework.boot:spring-boot-starter-security:3.2.4")
         implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server:3.2.4")
         runtimeOnly("org.postgresql:postgresql:42.2.27")
         // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jta-atomikos
@@ -51,6 +50,17 @@ allprojects {
 
         // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
         implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
+        // https://mvnrepository.com/artifact/org.camunda.bpm.springboot/camunda-bpm-spring-boot-starter-external-task-client
+        implementation("org.camunda.bpm.springboot:camunda-bpm-spring-boot-starter-external-task-client:7.22.0")
+        // https://mvnrepository.com/artifact/com.fasterxml.jackson.datatype/jackson-datatype-jsr310
+        implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.0")
+        // https://mvnrepository.com/artifact/org.camunda.bpm/camunda-engine-plugin-spin
+        implementation("org.camunda.bpm:camunda-engine-plugin-spin:7.22.0")
+        implementation("org.camunda.spin:camunda-spin-bom:7.22.0")
+        implementation("org.camunda.spin:camunda-spin-core:7.22.0")
+        implementation("org.camunda.spin:camunda-spin-dataformat-all:7.22.0")
+
+
 
 
         compileOnly("org.projectlombok:lombok")

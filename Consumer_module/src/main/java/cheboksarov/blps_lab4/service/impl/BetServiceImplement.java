@@ -52,27 +52,6 @@ public class BetServiceImplement implements BetService {
         return betRepository.findAllBySiteUser(siteUser);
     }
 
-    @Component
-    public class KafkaListeners{
-
-        @KafkaListener(
-                topics="do_bet_request_topic",
-                groupId="consumer_do_bet"
-        )
-        public void listenerDoBet(String data){
-            log.warn("Object from Producer: " + data);
-            DoBetRequestDeserializer doBetRequestDeserializer = new DoBetRequestDeserializer(data);
-            try {
-                DoBetRequest doBetRequest = doBetRequestDeserializer.deserialize();
-                doBet(doBetRequest);
-            }catch (Exception e){
-                log.warn(e.getMessage());
-            }
-        }
-    }
-
-
-
     @Override
     @Transactional
     public ResponseEntity<?> doBet(DoBetRequest doBetRequest) throws Exception {

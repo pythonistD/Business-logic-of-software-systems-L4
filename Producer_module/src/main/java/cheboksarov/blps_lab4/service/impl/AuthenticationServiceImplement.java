@@ -1,7 +1,7 @@
 package cheboksarov.blps_lab4.service.impl;
 
-import cheboksarov.blps_lab4.controller.AuthenticationResponse;
 import cheboksarov.blps_lab4.dto.AuthenticationRequestDto;
+import cheboksarov.blps_lab4.dto.AuthenticationResponse;
 import cheboksarov.blps_lab4.dto.RegisterRequestDto;
 import cheboksarov.blps_lab4.model.Credential;
 import cheboksarov.blps_lab4.model.Role;

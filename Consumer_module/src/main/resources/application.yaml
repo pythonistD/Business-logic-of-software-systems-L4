@@ -1,5 +1,9 @@
 server:
-  port: 8081
+  port: 8083
+camunda:
+  bpm:
+    client:
+      base-url: http://localhost:8081/engine-rest
 spring:
   quartz:
     job-store-type: memory
